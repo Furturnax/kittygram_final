@@ -1,26 +1,44 @@
-#  Как работать с репозиторием финального задания
+# Проект "Kittygram"
+![workflow](https://github.com/furturnax/kittygram_final/actions/workflows/main.yml/badge.svg)
 
-## Что нужно сделать
+Реализация социальной сети для ваших пушистых любимцев.
 
-Настроить запуск проекта Kittygram в контейнерах и CI/CD с помощью GitHub Actions
+Основные возможности:
+- публицакия вашего котика в виде отдельного поста;
+- подключение к `api` проекта;
+- автоматический деплой проекта на сервер.
 
-## Как проверить работу с помощью автотестов
+Проект является учебным. Основная польза в приобретении понимания реализации `CI/CD`, деплоя проекта на удаленный сервер, с использованием:
+- `Docker`;
+- `Workflows`;
+- `GitHub Actions`;
+- секретов `GitHub Actions`.
 
-В корне репозитория создайте файл tests.yml со следующим содержимым:
-```yaml
-repo_owner: ваш_логин_на_гитхабе
-kittygram_domain: полная ссылка (https://доменное_имя) на ваш проект Kittygram
-taski_domain: полная ссылка (https://доменное_имя) на ваш проект Taski
-dockerhub_username: ваш_логин_на_докерхабе
-```
+<br>
 
-Скопируйте содержимое файла `.github/workflows/main.yml` в файл `kittygram_workflow.yml` в корневой директории проекта.
+## Технологический стек:
+- [Python 3.9](https://docs.python.org/release/3.9/)
+- [Django 3.2.3](https://docs.djangoproject.com/en/3.2.3/)
+- [Django REST Framework 3.12.4](https://www.django-rest-framework.org/topics/documenting-your-api/)
+- [Pytest 6.2.4](https://docs.pytest.org/en/6.2.x/)
+- [Gunicorn 20.1.0](https://pypi.org/project/gunicorn/20.1.0/)
+- [Python dotenv 1.0.0](https://pypi.org/project/python-dotenv/)
 
-Для локального запуска тестов создайте виртуальное окружение, установите в него зависимости из backend/requirements.txt и запустите в корневой директории проекта `pytest`.
+<br>
 
-## Чек-лист для проверки перед отправкой задания
+## Запуск проекта :shipit: :
+[Руководство по созданию переменных окружения](./.env.example)
 
-- Проект Taski доступен по доменному имени, указанному в `tests.yml`.
-- Проект Kittygram доступен по доменному имени, указанному в `tests.yml`.
-- Пуш в ветку main запускает тестирование и деплой Kittygram, а после успешного деплоя вам приходит сообщение в телеграм.
-- В корне проекта есть файл `kittygram_workflow.yml`.
+[Руководство по развёртыванию проекта](./SetUp.md)
+
+<br>
+
+## Dreamteam:
+
+[GitHub](https://github.com/yandex-praktikum) | Автор проекта - Yandex Practicum  
+
+[GitHub](https://github.com/Furturnax) | Разработчик - Andrew Fedorchenko 
+
+[GitHub](https://github.com/nik-miniakink) | Наставник - Nikolay Minyakin
+
+[GitHub](https://github.com/EugeneSal) | Ревьюер - Evgeniy Salahutdinov
