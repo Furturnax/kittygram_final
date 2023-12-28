@@ -30,22 +30,22 @@ pip install -r backend/requirements.txt
 
 + Запустите проект через docker-compose:
 ```shell script
-docker compose -f docker-compose.yml up --build -d
+docker compose -f docker-compose.production.yml up --build -d
 ```
 
 + Выполнить миграции:
 ```shell script
-docker compose -f docker-compose.yml exec backend python manage.py migrate
+docker compose -f docker-compose.production.yml exec backend python manage.py migrate
 ```
 
 + Соберите статику:
 ```shell script
-docker compose -f docker-compose.yml exec backend python manage.py collectstatic
+docker compose -f docker-compose.production.yml exec backend python manage.py collectstatic
 ```
 
 + Скопируйте статику:
 ```shell script
-docker compose -f docker-compose.yml exec backend cp -r /app/static_backend/. /backend_static/static/
+docker compose -f docker-compose.production.yml exec backend cp -r /app/static_backend/. /backend_static/static/
 ```
 
 + Создать файл `.env` с переменными окружениями:
